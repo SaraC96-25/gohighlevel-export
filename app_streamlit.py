@@ -5,7 +5,7 @@ import time
 import os
 
 # --- CONFIGURAZIONE FISSA ---
-API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."  # <-- La tua API KEY qui
+API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6Ind0WWVNV0pLY283MmhxSXd0cjJWIiwidmVyc2lvbiI6MSwiaWF0IjoxNzQ1ODM2OTg5NDc5LCJzdWIiOiI4aDdBa2UzbHV6SHg3eWR4alhkOSJ9.w-Wab0mlhGlugXIMn_BFA_BrkOMqKsFPQlrD3UsWoF4"  # <-- La tua API KEY qui
 API_BASE_URL = "https://rest.gohighlevel.com/v1"
 
 HEADERS = {
