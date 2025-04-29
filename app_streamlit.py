@@ -49,10 +49,10 @@ def export_to_csv(contacts, filename):
         for i, contact in enumerate(contacts):
             notes = get_notes(contact["id"]) or ""
 
-            # Estrazione campo customField
+            # Estrazione campo customFields (corretto)
             business_type = ''
-            if 'customField' in contact and len(contact['customField']) > 0:
-                business_type = contact['customField'][0].get('value', '')
+            if 'customFields' in contact and len(contact['customFields']) > 0:
+                business_type = contact['customFields'][0].get('value', '')
 
             writer.writerow({
                 "Contact ID": contact["id"],
@@ -67,7 +67,7 @@ def export_to_csv(contacts, filename):
 
 # --- APP STREAMLIT ---
 
-st.title("📤 GoHighLevel - Esporta Contatti")
+st.title("\ud83d\udce4 GoHighLevel - Esporta Contatti")
 st.write("Premi il bottone qui sotto per scaricare il file CSV dei contatti con note e informazioni aziendali.")
 
 if st.button("Esporta Contatti"):
