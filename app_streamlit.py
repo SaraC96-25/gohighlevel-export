@@ -53,8 +53,8 @@ def export_to_csv(contacts, filename):
 
             # Estrazione corretta del campo customField specifico
             business_type = ''
-            if 'customFields' in contact and len(contact['customFields']) > 0:
-                for field in contact['customFields']:
+            if 'customField' in contact and len(contact['customField']) > 0:
+                for field in contact['customField']:
                     if field.get('id') == custom_field_id_business:
                         business_type = field.get('value', '')
                         break
