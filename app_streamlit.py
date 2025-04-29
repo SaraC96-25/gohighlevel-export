@@ -46,13 +46,18 @@ def export_to_csv(contacts, filename):
         # Progress bar
         progress_bar = st.progress(0)
 
+        custom_field_id_business = "HVGDO3HCKecaRGSIJ2UJ"  # ID corretto del campo custom
+
         for i, contact in enumerate(contacts):
             notes = get_notes(contact["id"]) or ""
 
-            # Estrazione campo customFields (corretto)
+            # Estrazione corretta del campo customField specifico
             business_type = ''
             if 'customFields' in contact and len(contact['customFields']) > 0:
-                business_type = contact['customFields'][0].get('value', '')
+                for field in contact['customFields']:
+                    if field.get('id') == custom_field_id_business:
+                        business_type = field.get('value', '')
+                        break
 
             writer.writerow({
                 "Contact ID": contact["id"],
