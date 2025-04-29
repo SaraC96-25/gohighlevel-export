@@ -56,10 +56,10 @@ def export_to_csv(contacts, filename):
 
             writer.writerow({
                 "Contact ID": contact["id"],
-                "Nome": f'{contact.get("firstName", "")} {contact.get("lastName", "")}',
+                "Name": f'{contact.get("firstName", "")} {contact.get("lastName", "")}',
                 "Email": contact.get("email", ""),
-                "Telefono": contact.get("phone", ""),
-                "Note": notes,
+                "Phone": contact.get("phone", ""),
+                "Notes": notes,
                 "Di che cosa si occupa la tua azienda?": business_type
             })
             time.sleep(0.05)
