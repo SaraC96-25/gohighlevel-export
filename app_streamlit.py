@@ -67,7 +67,7 @@ def export_to_csv(contacts, filename):
 
 # --- APP STREAMLIT ---
 
-st.title("\ud83d\udce4 GoHighLevel - Esporta Contatti")
+st.title("GoHighLevel - Esporta Contatti")
 st.write("Premi il bottone qui sotto per scaricare il file CSV dei contatti con note e informazioni aziendali.")
 
 if st.button("Esporta Contatti"):
